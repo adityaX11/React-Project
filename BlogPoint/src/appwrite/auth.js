@@ -60,3 +60,19 @@ export class AuthService{  //This is an ES6 class. Instead of scattering functio
 
 const authsService=new AuthService();
 export default authsService;
+
+
+
+
+// some key point of session and JWT
+
+// Both sessions and JWTs do the same core job:
+// ➡️ Keep a user authenticated after login, so they don’t have to type their username + password for every single request.
+
+// Both sessions and JWTs do the same core job:
+// ➡️ Keep a user authenticated after login, so they don’t have to type their username + password for every single request.
+
+// JWT-> (3 part seperated by dot)[header.payload.signature].
+// Header-> tells us type of token and which type of algo use
+// payload-> carry you important info like id name etc for every request verifivation
+// signature-> it denoted your token is valid or not for current request bcz after assign time token will be expire or wipeout.
