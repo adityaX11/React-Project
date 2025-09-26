@@ -4,7 +4,7 @@
 import conf from "../conf/conf";
 import {Client,Account,ID} from "appwrite"
 
-export class AuthService{
+export class AuthService{  //This is an ES6 class. Instead of scattering functions, you wrap all auth-related logic into one service class (cleaner + reusable).
     client = new Client();
     account;
 
@@ -12,6 +12,7 @@ export class AuthService{
         this.client
             .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId);
+
         this.account=new Account(this.client);
     }
 
